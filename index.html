@@ -1,0 +1,600 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	  
+		<!-- Licensed under the Apache 2.0 License -->
+		<link rel="stylesheet" type="text/css" href="./images/stylesheet.css">
+		<!-- Licensed under the SIL Open Font License -->
+		<link rel="stylesheet" type="text/css" href="./images/source-serif-pro.css">
+		<link rel="stylesheet" type="text/css" href="./images/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./images/bootstrap-theme.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Уровень смены тренда</title>
+		<link rel="stylesheet" href="./images/guzzle.css" type="text/css">
+		<link rel="stylesheet" href="./images/pygments.css" type="text/css">
+		<script type="text/javascript" id="documentation_options" data-url_root="../" src="./images/documentation_options.js.загружено"></script><style type="text/css" id="operaUserStyle"></style>
+		<script type="text/javascript" src="./images/jquery.js.загружено"></script>
+		<script type="text/javascript" src="./images/underscore.js.загружено"></script>
+		<script type="text/javascript" src="./images/doctools.js.загружено"></script>
+		<script type="text/javascript" src="./images/language_data.js.загружено"></script>
+		<link rel="index" title="Index" href="https://www.tradingview.com/pine-script-docs/en/v5/genindex.html">
+		<link rel="search" title="Search" href="https://www.tradingview.com/pine-script-docs/en/v5/search.html">
+		<link rel="next" title="First indicator" href="https://www.tradingview.com/pine-script-docs/en/v5/primer/First_indicator.html">
+		<link rel="prev" title="Pine Script™ primer" href="https://www.tradingview.com/pine-script-docs/en/v5/primer/index.html">
+	</head>
+	<body>
+		<!-- <style type="text/css">:root img[style*="//counter.yadro.ru/"], :root img[src^="/stat/"][width="88"][height="31"], :root img[src*="://c.bigmir.net/"], :root a[href^="http://hitcounter.ru/top/stat.php"], :root a[href*="/rating/"] > img[width="88"][height="31"], :root a[href*="//top.mail.ru/jump?"], :root a#mobtop[title^="Рейтинг мобильных сайтов"], :root [title="uWeb Counter"], :root [title="uCoz Counter"], :root .min-width-normal > #popup_container ~ #fade, :root .min-width-normal > #popup_container, :root body > div[class^="_"][class*=" _"][class$="_stBig"], :root body > div[style="position: fixed; z-index: 999999; width: 400px; height: 308px; right: 5px; bottom: 5px;"], :root body > div[id^="dV"][style^="width"][style*="height"][style*="position"][style*="fixed"][style*="overflow"][style*="z-index"][style*="background"], :root .flex-promo-series > .left-col > :not(#players):not(.serial-series-info), :root a[href*="://news.mirtesen.ru/newdata/"], :root .app.blog-post-page .secondary-header-ad-block, :root .app.blog-post-page #blog-post-item-video-ad, :root #root > .app .sportrecs, :root #root > .app #very-right-column, :root body.has-brand .b-content__main > div[id]:not([class]):empty, :root body.has-brand .b-content__main .b-player a[href*="aHR0c"], :root div[style="width: 252px; height: 450px; position: fixed; right: 0px; top: 0px; overflow: hidden; z-index: 10000;"], :root object[data^="blob"], :root img[width="728"][height="90"], :root img[width="160"][height="600"], :root iframe[src*="zhitomir.info/price"], :root iframe[src*="trafic-media.ru"], :root iframe[src*="hd.gg33.top/"], :root iframe[src*="ads.exosrv.com"], :root iframe[src*="://vidroll.ru/"], :root iframe[src*="://promo-bc.com/"], :root iframe[src*="://partner-widget.vsesdal.com/"], :root iframe[src*="://mark-media.com.ua"], :root iframe[src*="://goodgame.ru/html/embed-player/dist/index.html?partner="], :root iframe[src*="://ab.adpro.com.ua/"], :root iframe[src*="/mixadv_"], :root iframe[src*="/carta.ua/ajax/widget."], :root iframe[src*="/3647.tech"], :root iframe[id^="republer"], :root iframe[data-src*="fwdcdn.com/frame/partners/"], :root div[id^="yandex_rtb"], :root div[id^="trafmag_"], :root div[id^="tizerws_"], :root div[id^="rtn4p"], :root div[id^="republer_"], :root div[id^="news_nest_net_ru"], :root div[id^="news_2xclick_ru_"], :root div[id^="join_informer_"], :root div[id^="itizergroup_"], :root div[id^="gnezdo_ru_"], :root div[id^="cpa_rotator_block"], :root div[id^="beroll_rotator"], :root div[id^="b_tz_"], :root div[id^="admixer-"], :root div[id^="DIV_DA_"], :root div[id^="Crt-"][style], :root div[data-server-rendered="true"] > div[id^="la-"], :root iframe[src^="https://a.adtng.com/"], :root div[class^="da-ya-widget"], :root div[class^="da-widget-"], :root div[class^="block_fortress"], :root div[class^="bidvol-widget-"], :root div[class*="td-a-rec-id-"], :root a[onclick*="trtkp.ru"], :root a[onclick*="offergate-amigo"], :root iframe[src*="litres.ru/static/widgets"], :root a[href^="https://www.juicer.io?referrer="], :root a[href^="https://relap.io/"][href*="promo_ad_link"], :root a[href^="https://msetup.pro"], :root a[href^="https://kshop"][href*=".pro/"], :root a[href^="https://bongacams"][href*="com/track?"], :root a[href^="http://trafmaster.com"], :root a[href^="http://traderstart.mirtesen.ru"], :root a[href^="http://tds-2.ru"], :root a[href^="http://kshop.biz/"], :root a[href^="http://glprt.ru/affiliate/"], :root a[href^="http://datxxx.com"], :root a[href^="http://browserload.info/"], :root img[data-src="https://catalog.orbita.co.il/orbita.gif"], :root a[href^="/images/obmen/"][href$=".php"][target="_blank"], :root a[href="http://advert.mirtesen.ru/"], :root a[href*="zdravo-med.ru"], :root a[href*="webdiana.ru/click"], :root a[href*="tvroff.net"], :root a[href*="tvks.ru"], :root a[href*="trklp.ru"], :root a[href*="traflabs.xyz"], :root div[id^="CGCandy"], :root a[href*="tptrk.ru"], :root a[href*="top.24smi.info"], :root a[href*="thor-media.ru/click/"], :root a[href*="bgrndi.com"], :root a[href*="shakesin.com"], :root a[href*="shakes.pro"], :root a[href*="sapmedia.ru"], :root a[href*="rexchange.begun.ru/rclick?"], :root a[href*="retagapp.com"], :root a[href*="re-directme.com"], :root a[href^="https://homyanus.com"], :root a[href*="please-direct.me"], :root a[href*="://landingtracker.com/"], :root a[href*="offhealth.ru"], :root a[href*="lifebloggersz.ru"], :root a[href*="navaxudoru.com"], :root a[href*="m1cpl.ru"], :root div[id^="lazyad-"], :root a[href*="land-gooods.ru"], :root #root > .app .adfox-top, :root a[href*="joycasino.com/?partner="], :root a[href*="idealmedia.io"], :root a[href*="gocdn.ru"], :root a[href*="go.ad2up.com"], :root a[href*="//softboxik1.ru/"], :root a[href*="flylinks.pw"], :root [data-la-block-show-id], :root a[href*="films.ws"], :root .section-subheader > .section-hotel-prices-header, :root a[href*="feellights.ru"], :root a[href*="cmsmodnews.com"], :root a[href*="amigo-biz.ru/ads/click"], :root a[href*="amgfile.ru"], :root a[href*="ads2-adnow.com"], :root a[href*="slovosil.com"], :root a[href*="ads-provider.com"], :root a[href*="adpool.bet/"], :root a[href*="://www.meendoru.net/?partner="], :root a[href^="https://bs.serving-sys.com"], :root a[href*="://womens-journal.ru/"], :root a[href*="://vse-sdal.com/promo/"], :root a[href*="://torrent-repa.site/"], :root a[href*="://topclicks.club/"], :root a[href*="://telamon"][href*="/tracker/?partner="], :root a[title="TopTracker.Ru - Рейтинг трекеров."], :root a[href*="://clickstats.fun/"], :root a[href*="://techdmn.com/"], :root [onclick*="traffic-media.co"], :root a[href*="://tatarkoresh.ru"], :root a[href*="://sugisatomi.com/"], :root a[href*="://softperehod.ru/"], :root a[href*="://segodnia.club/"], :root [href*="driverpack.io/"], :root a[href*="cpagetti1.com"], :root a[href*="://search-cdn.ru/r/"], :root a[href^="http://www.onclickmega.com/jump/next.php?"], :root a[href^="https://newbinotracs.com/"], :root a[href*="://ruprivate.club/"], :root a[href*="://ruonline.bar/"], :root a[href^="http://eaplay.ru/"], :root amp-connatix-player, :root a[href*="://riaccaw.com/"], :root [href^="https://join.playboyplus.com/track/"], :root a[href*="://reidancis.com/"], :root a[href*="://refpamjeql.top/"], :root a[href*="://r.advg.agency/"], :root a[href*="/onvix.tv/promo/"][target=_blank], :root a[href*="://premiumredir.ru/"], :root a[href*="://ourbrowser.net"], :root a[href*="://manysoftlink.ru/"], :root a[href^="http://static.fleshlight.com/images/banners/"], :root a[href*="://loderkkis.ru"], :root div[id^="advertur_"], :root .trc_related_container div[data-item-syndicated="true"], :root a[href*="://lapina.xyz/"], :root a[href*="://lapina.best/"], :root a[href*="://go.click2bit.net/"], :root a[href*="://go.bundlebyte.net/r/"], :root a[href*="://getbrauzer.ru/"], :root a[href*="://newbrowserme.ru/"], :root a[href*="://gertadv.ru/"], :root a[href*="torrentum.ru"], :root a[href*="://filesmytop.ru/"], :root [href^="https://www.mypillow.com/"] > img, :root a[href*="://fast2click.ru/"], :root a[href*="tvkw.ru"], :root a[href^="http://www.mrskin.com/tour"], :root a[href*="://etcodes.com/"], :root a[href*="://et-cod.com/"], :root a[href^="https://go.xxxjmp.com"], :root a[href*="://elgrur.com/"], :root a[href*="://doxod24.online/"], :root a[href*="://dmtech05.com/"], :root a[href^="https://tragency-clesburg.icu/"], :root a[href*="://clickstats.online/"], :root a[href*="://clickrpk.com/"], :root a[href*="://clickfrm.com/"], :root a[href*="://chikidiki.ru"], :root a[href*="://bubblevard.com/"], :root div[id^="adfox_"], :root a[href*="://bestnewsoft.ru/"], :root a[href*="://analyticsq.com"], :root a[href*="/universallnk.net/"], :root a[href^="http://fly-shops.ru"], :root a[href*="/universal-lnk.net/"], :root a[href*="://getyoursoft.ru/"], :root a[href*="/sb/clk/"], :root a[href*="/rlink/simptizer/"], :root a[href^="https://go.247traffic.com/"], :root a[href*="://extlinka.ru/"], :root a[href*="/rapidtor.ru"], :root a[href*="/onvix.me/promo/"][target=_blank], :root a[href^="https://streamate.com/landing/click/"], :root a[href*="/newbrowser.club/"], :root a[href*="/mosday.ru/ad/"], :root a[href*="/loaderu.ru/"], :root a[href^="https://prime.rambler.ru/promo/"], :root a[href*="/installpack.net"], :root a[href*="/fastvk.com"], :root object[data*="ads.com/clk.swf"], :root a[href*="/eversaree.bid"], :root a[href*="://r.advmusic.com/"], :root a[href*="/clubleads.ru"], :root a[href*="/afftraf.co/"], :root a[href*="/advjump.com"], :root a[href*="://yadistr.ru/"], :root a[href*="//yojlf.com"], :root a[href^="https://taghaugh.com/"], :root a[href*="://installpack.ru"], :root a[href*="//viruniversal.com/"], :root a[href*="//universalut.info/"], :root a[href*="//universalini.info/"], :root a[href*="//universalie.info/"], :root a[href*="//ufiler-pro2.ru"], :root a[href*="//ubar.pro"], :root a[href*="//ubar-pro"], :root a[href*="/u-loads.ru/"], :root [href^="http://www.mypillow.com/"] > img, :root a[href^="//go.eabids.com/"], :root a[href*="//tranqvilius.com/"], :root a[href^="https://www.iyalc.com/"], :root div[data-adzone], :root a[href*="://tele.gg/"], :root a[href*="//tiruniversal.com/"], :root [href^="https://optimizedelite.com/"] > img, :root a[href*="//tdsrotate.ru/"], :root a[href^="http://d2.zedo.com/"], :root a[href*="//rotatemysoft.ru/"], :root a[href^="https://go.goasrv.com/"], :root a[href*="//restofarian.com"], :root a[href*="//reruniversal.com/"], :root a[href*="//portakamus.com/"], :root a[href^="https://go.nordvpn.net/aff"] > img, :root a[href*="//offergate.pro/"], :root a[href*="//newbrowser.me/"], :root a[href*="refpazus.top"], :root a[href^="https://bongacams10.com/track?"], :root a[href*="//loderna.ru"], :root a[href^="https://axdsz.pro/"], :root a[href^="https://tour.mrskin.com/"], :root #BlWrapper > .b-temp_rbc, :root a[href*="//historategory.com/"], :root a[href*="//febrare.ru/"], :root a[href*="//givemysoft.ru/"], :root a[href*="//getmybrowser.ru/"], :root a[href*="://ya-distrib.ru/r/"], :root [href^="https://www.hostg.xyz/"] > img, :root a[href*="//gerocenius.com/"], :root [id^="ad_slider"], :root a[href^="http://adultfriendfinder.com/go/page/landing"], :root a[href*="advertwebgid.ru"], :root a[href*="//ext-load.net"], :root a[href*="://click2soft.ru/"], :root a[href*="//do-rod.com/"], :root a[href^="https://www.adskeeper.com"], :root a[href*="bestforexplmdb.com"], :root a[href*="/universalsrc.com/"], :root a[href^="https://azpresearch.club/"], :root a[href*="//bestonewos.com/"], :root a[href*="//avertise.ru/"], :root a[href*="//adretarget.net/"], :root div[id^="traffim-widget"], :root a[href^="https://m.do.co/c/"] > img, :root a[href*="//24smi."][href*="/top/"], :root a[href*=".ufiler.pro/"], :root a[href*="://topsofto.ru/"], :root [id^="unit_"] > a[href*="://smi2.net"], :root a[href*=".orgsales.ru"], :root [src^="//am15.net/?"], :root a[href*="://rendersaveron.com"], :root [id^="unit_"] > a[href*="://vrf.ru"], :root a[href*="//advtise.ru/"], :root .commercial-unit-mobile-top > div[data-pla="1"], :root a[href^="https://www.onlineusershielder.com/"], :root a[href*="/ber-ter.com"], :root [id^="newPortal_informer_"], :root [id^="n4p_"], :root #root > .app > .sticky-button, :root [href^="https://download.cdn.yandex.net/yandex-tag/weboffer/"], :root [href*="pigiuqproxy.com"], :root a[href*=".braun634.com/"], :root a[href*="media-rotate.com"], :root [href*="driftawayforfun.com"], :root [href*="://simpalsid.com/ad/click?id"], :root a[href^="https://t.hrtye.com/"], :root [href*="://morelnk.ru/"], :root a[href*="mixadvert.com"], :root .card-captioned.crd > .crd--cnt > .s2nPlayer, :root a[href*="/ogclick.com/api/redirect"], :root [data-link*="://topclicks.club/"], :root [href*="://edgrmtracking.com/"], :root [href*="://clickpzk.com/"], :root [href*="://click.1k3web.com/"], :root a[href*="intovarro.ru"], :root [href*="/uni-tds.com/"], :root a[href^="http://go.xtbaffiliates.com/"], :root [data-link*="://ubar-pro"], :root a[href*="://takenewsoft.ru/"], :root article.ad, :root a[href*="//spishi.vip/"], :root a[href*="sandratand.ru"], :root .header-banner > #moneyback[target="_blank"], :root [data-link*="/sb/clk/"], :root [data-la-show-id], :root div[id^="zcbclk"], :root [data-la-custom-block], :root [id^="chp_ads_block"], :root a[href*="herrabjec.pro"], :root [data-la-block], :root a[href^="https://fourwhenstatistics.com/"], :root [href*=".drp.su/"], :root div[id^="ad-div-"], :root [class^="flat_"][class*="_modal"], :root div[id^="adpartner-jsunit-"], :root a[href*="/yfiles1.ru"], :root a[href*="wow-partners.com/click.php"], :root [class^="flat_"][class*="_cross"], :root .content_rb[id^="content_rb_"], :root .base-page_center > .banerBottom, :root #adv_unisound ~ #main > #slidercontentContainer, :root a[href*="/get-torrent.ru"], :root #adv_kod_frame ~ #gotimer, :root a[href^="https://ad.zanox.com/ppc/"] > img, :root #MT_overroll ~ div[class][style="left:0px;top:0px;height:480px;width:650px;"], :root a[href*="kinqon.ru"], :root img[src*="://cp.beget.com/promo_data/"], :root zeus-ad, :root a[href*="problogrus.ru"], :root topadblock, :root a[href*="://offergate-apps-phkr.com/"], :root span[id^="ezoic-pub-ad-placeholder-"], :root guj-ad, :root gpt-ad, :root a[href^="https://go.trackitalltheway.com/"], :root div[jsdata*="CarouselPLA-"][data-id^="CarouselPLA-"], :root a[href*="//refpaewsbc.top/"], :root img[src*="//i.i.ua/r/"], :root [href="https://www.masstortfinancing.com/"] > img, :root div[id^="zergnet-widget"], :root img[src*="://r.i.ua/"], :root div[id^="yandex_ad"], :root div[id^="smi_teaser_"], :root div[id^="vuukle-ad-"], :root [href^="https://go.xlrdr.com"], :root div[id^="sticky_ad_"], :root a[href*="muz-loader.site"], :root a[href*="clickscloud.net"], :root div[id^="rc-widget-"], :root [href^="https://goldcometals.com/clk.trk"], :root a[href^="https://cams.imagetwist.com/in/?track="], :root div[id^="gpt_ad_"], :root div[id^="ezoic-pub-ad-"], :root div[id^="div-gpt-"], :root a[href*="fortedrow.pro"], :root div[id^="dfp-ad-"], :root #root > .app .brand-widget__right-cl, :root div[id^="adspot-"], :root [class^="fpm_"][class*="_crss"], :root [href^="https://noqreport.com/"] > img, :root a[href*="://superiortds.ru/"], :root div[id^="ads300_250-widget-"], :root div[id^="ads300_100-widget-"], :root div[id^="ads250_250-widget-"], :root a[href*="trk-1.com"], :root div[id^="adrotate_widgets-"], :root div[id^="adngin-"], :root div[id^="_vdo_ads_player_ai_"], :root img[title="bigmir)net TOP 100"], :root div[id*="ScriptRoot"], :root div[id*="MarketGid"], :root div[data-native_ad], :root div[data-mpu1], :root div[data-insertion], :root div[data-id-advertdfpconf], :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"], :root div[data-google-query-id], :root hl-adsense, :root div[data-contentexchange-widget], :root div[data-id^="div-gpt-ad-"], :root a[href*="//tekaners.com/"], :root div[data-content="Advertisement"], :root div[data-alias="300x250 Ad 2"], :root div[data-alias="300x250 Ad 1"], :root div[data-adunit], :root div[data-adunit-path], :root div[data-ad-wrapper], :root a[href*="//partners.house/"], :root [href^="http://join.michelle-austin.com/"], :root [id^="unit_"] > a[href*="://mirtesen.ru"], :root div[data-ad-targeting], :root div[data-ad-placeholder], :root a[href*="/go.1k3.net/"], :root div[class^="native-ad-"], :root a[href*="://shusnarmuk.com/"], :root div[data-dfp-id], :root div[class^="kiwi-ad-wrapper"], :root div[class^="Adstyled__AdWrapper-"], :root a[href^="https://go.ebrokerserve.com/"], :root div[aria-label="Ads"], :root display-ads, :root display-ad-component, :root [id^="relap-custom-iframe-rec"], :root aside[id^="adrotate_widgets-"], :root a[href*="ftpglst.com"], :root [data-name="adaptiveConstructorAd"], :root ark-top-ad, :root a[href^="https://ad.doubleclick.net/"], :root app-advertisement, :root [href^="https://shrugartisticelder.com"], :root [href^="http://globsads.com/"], :root a[href*="://folltiz.site/"], :root body > div[style="position: fixed; z-index: 999999; width: 400px; height: 308px; left: 5px; bottom: 5px;"], :root app-ad, :root a[href*="kma1.biz"], :root noindex > .search_result[class*="search_result_"], :root a[href^="https://go.xlvirdr.com"], :root amp-fx-flying-carpet, :root [href^="https://r.kraken.com/"], :root #PopWin[onmousemove], :root a[href*="//1xbetlk.site/"], :root amp-embed[type="taboola"], :root [href^="https://antiagingbed.com/discount/"] > img, :root amp-ad-custom, :root ad-shield-ads, :root [data-ad-width], :root ad-desktop-sidebar, :root div[id^="div-ads-"], :root a[href*="://downloadbrowsernew.com/"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root a[href*="//12traffic.ru/"], :root a[href^="https://www.infowarsstore.com/"] > img, :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root AD-TRIPLE-BOX, :root a[href^="https://yogacomplyfuel.com/"], :root [href^="https://zstacklife.com/"] img, :root a[href^="https://t.aslnk.link/"], :root a[href^="https://www.sweetdeals.com"], :root a[href^="https://www.highcpmrevenuenetwork.com/"], :root a[href*="ex.24smi.info"], :root div[class^="Display_displayAd"], :root a[href^="https://www.bang.com/?aff="], :root [href^="https://mypillow.com/"] > img, :root a[href^="https://www.sheetmusicplus.com/?aff_id="], :root a[href^="https://bngpt.com/"], :root a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="], :root [href^="https://safer-redirection.com"], :root a[href^="https://www.mypornstarcams.com/landing/click/"], :root .commercial-unit-mobile-top .jackpot-main-content-container > .UpgKEd + .nZZLFc > .vci, :root a[href^="https://syndication.exoclick.com/"], :root a[href^="https://financeads.net/tc.php?"], :root a[href^="https://frameworkdeserve.com/"], :root a[href^="https://www.mrskin.com/tour"], :root a[href^="https://www.kingsoffetish.com/tour?partner_id="], :root a[href^="https://wittered-mainging.com/"], :root a[href^="https://t.grtyi.com/"], :root a[href^="https://www.highperformancecpmgate.com/"], :root a[href^="https://www.get-express-vpn.com/offer/"], :root a[href^="http://www.friendlyduck.com/AF_"], :root a[href^="https://www.financeads.net/tc.php?"], :root .mywidget__col > .mywidget__link_advert, :root a[href^="https://www.brazzersnetwork.com/landing/"], :root [href^="https://track.fiverr.com/visit/"] > img, :root [data-template-type="nativead"], :root a[href*="/myuniversalnk.net/"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root a[href^="https://webroutetrk.com/"], :root a[href*="/sarimsolus.com/"], :root div[id^="admixer_"], :root a[href^="https://wantopticalfreelance.com/"], :root a[href*="shakesclick.com"], :root a[href*="://go.btraffic.net/"], :root div[class^="cnt32_"][id^="cnt_rb_"], :root a[href^="https://twinrdsyn.com/"], :root [class^="fpm_"][class*="_out"], :root a[href^="https://tsartech.g2afse.com/"], :root [href^="https://turtlebids.irauctions.com/"] img, :root a[href^="https://tracking.avapartner.com/"], :root a[href^="https://track.afcpatrk.com/"], :root a[href*="https://relap.io/r?"], :root a[href^="https://traffic.bannerator.com/"], :root a[href^="https://track.adform.net/"], :root a[href*="goodtrack.ru"], :root a[href^="https://torguard.net/aff.php"] > img, :root div[id^="criteo-"][style], :root a[href*="://cozibaneco.com/"], :root a[href*="://edugrampromo.com/"], :root [data-role="tile-ads-module"], :root a[href^="https://adsrv4k.com/"], :root a[href^="https://go.xlviirdr.com"], :root a[href^="https://thaudray.com/"], :root a[href^="https://t.adating.link/"], :root iframe[src*="tureckiy-serial.ru/"][src$=".php"], :root a[href^="https://syndication.dynsrvtbg.com/"], :root div[class*="relap"][class*="-rec-item"], :root a[href^="https://static.fleshlight.com/images/banners/"], :root a[href^="https://refpazkjixes.top/"], :root [src*="mixadvert.com"], :root [onclick*="msetup"][onclick*="partner"][onclick*="utm_"], :root a[href^="https://go.strpjmp.com/"], :root a[href^="https://refpa4903566.top/"], :root div[id^="ads_games_"], :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img, :root a[href^="https://serve.awmdelivery.com/"], :root a[href^="https://prf.hn/click/"][href*="/adref:"] > img, :root div[id^="M"][id*="Composite"], :root a[href^="https://mmwebhandler.aff-online.com/"], :root a[href^="https://www.bet365.com/"][href*="affiliate="], :root a[href*="litewebbusiness.com"], :root iframe[id^="google_ads_frame"], :root iframe[id^="marketgid_"], :root a[onclick*="n284adserv.com"], :root a[href^="https://pb-track.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root div[id^="ad_position_"], :root a[href^="https://ovb.im/"], :root a[href^="https://natour.naughtyamerica.com/track/"], :root a[href*="//adoffer.pro/"], :root [href^="https://stvkr.com/"], :root [href^="https://freecourseweb.com/"] > .sitefriend, :root [href^="https://www.herbanomic.com/"] > img, :root div[id^="bidvol-widget-"], :root [href^="http://go.cm-trk2.com/"], :root a[href*="://kinobud.site/"], :root a[href^="https://maymooth-stopic.com/"], :root a[href^="https://loboclick.com"], :root [href^="https://routewebtk.com/"], :root a[href^="https://see.kmisln.com/"], :root .trc_rbox .syndicatedItem, :root a[href^="https://a.bestcontentweb.top/"], :root a[href^="https://lobimax.com/"], :root a[href^="https://go.xxxijmp.com"], :root a[href^="https://lead1.pl/"], :root a[href*="katuhus.com"], :root a[data-href*="recreativ.ru"], :root a[href^="https://landing.brazzersnetwork.com/"], :root a[href^="https://ads.leovegas.com/redirect.aspx?"], :root [class^="fpm_"][class*="_modal"], :root a[href^="https://land.brazzersnetwork.com/landing/"], :root a[href^="https://juicyads.in/"], :root [href*="://click.1k3web.net/"], :root a[href^="https://aweptjmp.com/"], :root a[href^="https://itubego.com/video-downloader/?affid="], :root a[href^="https://iqbroker.com/"][href*="?aff="], :root a[href*="trtkp.ru"], :root a[href*="//fofuvipibo.com/"], :root [href^="http://join.shemalepornstar.com/"], :root [id^="ad_sky"], :root a[href^="https://incisivetrk.cvtr.io/click?"], :root a[href^="https://iactrivago.ampxdirect.com/"], :root [data-revive-zoneid], :root a[href^="https://googleads.g.doubleclick.net/pcs/click"], :root a[href*="//universalse.info/"], :root a[href^="http://click.hotlog.ru/"], :root a[href^="https://clk.wrenchsound.store/"], :root a[href^="https://go.zybrdr.com"], :root div[style*="am15.net/img/player_skins"], :root a[href^="https://go.xxxiijmp.com"], :root a[href*="://softclicks.ru/"], :root a[href^="https://go.xtbaffiliates.com/"], :root [alt="Rambler's Top100"], :root a[href^="https://ismlks.com/"], :root [href*="://drp.su/"], :root a[href^="https://go.xlirdr.com"], :root a[href^="https://go.xlviiirdr.com"], :root [data-css-class="dfp-inarticle"], :root [id^="ad-wrap-"], :root a[href*="://ufiler-pro.ru/"], :root a[href^="https://go.tmrjmp.com"], :root a[href*="://getfiletds.ru/"], :root a[href^="https://go.skinstrip.net"][href*="?campaignId="], :root a[href*=".twkv.ru"], :root a[href^="https://go.markets.com/visit/?bta="], :root a[href^="//lambingsyddir.com/"], :root a[href^="https://billing.purevpn.com/aff.php"] > img, :root a[href^="https://go.hpyrdr.com/"], :root a[href^="https://go.goaserv.com/"], :root a[href^="http://reals-story.ru/"], :root a[href^="https://track.wg-aff.com"], :root a[href^="https://go.dmzjmp.com"], :root a[href*="makegreat.website"], :root body.has-brand .b-content__main > div[style^="height: 250px; overflow: hidden;"], :root a[href^="https://go.admjmp.com/"], :root a[href*="browser-ru.site"], :root a[href^="https://www.nutaku.net/signup/landing/"], :root [href^="https://kingered-banctours.com/"], :root a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img, :root [href^="https://affiliate.fastcomet.com/"] > img, :root a[href*="//universalice.info/"], :root a-ad, :root a[href^="http://amigodistr.ru/"], :root a[href^="https://affiliate.rusvpn.com/click.php?"], :root a[href^="https://geniusdexchange.com/"], :root iframe[title="mixAd"], :root a[href^="https://syndication.optimizesrv.com/"], :root DIV[id^="DIV_NNN_"], :root a[href^="https://adnetwrk.com/"], :root a[href^="https://go.gldrdr.com/"], :root a[href*="cpl1.ru"], :root a[href^="https://funkydaters.com/"], :root a[href^="https://flirtandsweets.life/"], :root a[href^="https://www.mrskin.com/account/"], :root a[href^="https://go.xlivrdr.com"], :root bottomadblock, :root a[href^="https://fertilitycommand.com/"], :root [href^="https://traffserve.com/"], :root [data-href^="https://download.cdn.yandex.net/yandex-tag/weboffer/"], :root a[href^="https://click.hoolig.app/"], :root div[data-native-ad], :root a[href^="https://engine.trackingdesks.com/"], :root a[href*="/uni-lnk.com/"], :root a[href*="://vpnbrowser.ru/"], :root a[href*="/onvix.co/promo/"][target=_blank], :root .trc_rbox_div .syndicatedItemUB, :root [href^="https://totlnkcl.com/"], :root a[href^="https://bongacams2.com/track?"], :root [href^="https://www.reimageplus.com/"], :root a[href*="tdstrk.ru"], :root a[href^="https://engine.phn.doublepimp.com/"], :root a[href*="please-direct.com"], :root a[href^="https://engine.blueistheneworanges.com/"], :root [onclick*="content.ad/"], :root a[href^="https://clixtrac.com/"], :root div.fadeInDown[id$="____equal"][class$="____equal"], :root a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"], :root [href*="://click.1k3pub.com/"], :root a[href^="https://join.dreamsexworld.com/"], :root a[href*="://clickstats.pw/"], :root a[href^="https://click.linksynergy.com/fs-bin/"], :root [href^="https://wct.link/"], :root a[href^="https://track.totalav.com/"], :root img[src^="https://images.purevpnaffiliates.com"], :root a[href^="https://porntubemate.com/"], :root a[href^="http://www.gfrevenge.com/landing/"], :root body > iframe[style^="position"][style*="fixed"][id^="iFb"][src^="/?"], :root .ob_container .item-container-obpd, :root a[href^="https://clickadilla.com/"], :root div[class^="yandex_rtb"], :root a[href*="://searchlnk.ru/r/"], :root a[href^="https://click.dtiserv2.com/"], :root a[href*="://yasearchcdn.ru/r/"], :root a[href*="/vkout.ru"], :root a[href^="https://claring-loccelkin.com/"], :root a[href*="/uloads.ru/"], :root #root > .app .adfox, :root [class^="s2nPlayer"], :root iframe[src*="//refpakglscpj."], :root a[href^="http://olivka.biz/"], :root [data-ad-cls], :root a[href^="https://chaturbate.jjgirls.com/?track="], :root a[href*="//universalin.info/"], :root a[href*="kodielinktrust.ru"], :root iframe[src*="://rstbtmd.com/"], :root a[href^="http://www.onwebcam.com/random?t_link="], :root a[href*="://101partners-stat2.com/"], :root a[href^="https://www.nudeidols.com/cams/"], :root a[href^="https://chaturbate.com/in/?track="], :root iframe[src*="laim.tv/rotator/"], :root a[href*="/advertisesimple.info"], :root a[href*="//loderla.online"], :root .base-page_center > .banerTopOver, :root a[href^="https://chaturbate.com/in/?tour="], :root #kt_player > a[target="_blank"], :root a[href^="http://bongacams.com/track?"], :root a[href^="https://camfapr.com/landing/click/"], :root a[href^="https://bluedelivery.pro/"], :root a[href^="https://cam4com.go2cloud.org/"], :root a[href^="https://affcpatrk.com/"], :root #topstuff > #tads, :root a[href^="https://black77854.com/"], :root a[href^="https://burpee.xyz/"], :root a[href^="http://adultgames.xxx/"], :root a[href*="homework.ru/?partnerId="], :root a[href^="https://ndt5.net/"], :root [href*="postlnk.com"], :root a[href^="https://a2.adform.net/"], :root a[href^="https://batheunits.com/"], :root iframe[src*="fwdcdn.com/frame/partners/"], :root a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"], :root [data-dynamic-ads], :root a[href^="https://banners.livepartners.com/"], :root a[href^="https://adultfriendfinder.com/go/page/landing"], :root a[href^="https://www.sugarinstant.com/?partner_id="], :root a[href*="gpclick.ru"], :root [href="https://masstortfinancing.com"] img, :root a[href^="http://luckiestclick.com/goto."], :root [class^="fpm_"][class*="_cross"], :root a[href^="https://albionsoftwares.com/"], :root a[href^="https://fleshlight.sjv.io/"], :root a[href^="https://go.etoro.com/"] > img, :root a[href*="/universalsrc.net/"], :root [href="https://ourgoldguy.com/contact/"] img, :root a[href^="https://join.sexworld3d.com/track/"], :root div[id*="Teaser_Block"], :root a[href^="https://intenseaffiliates.com/redirect/"], :root a[href^="https://ads.ad4game.com/"], :root a[href*="/rapidtor.site"], :root a[href^="http://partners.etoro.com/"], :root [id^="google_ads_iframe"], :root a[href^="https://affpa.top/"], :root a[href^="https://adjoincomprise.com/"], :root a[href*="xxxrevpushclcdu.com"], :root [href^="http://misslinkvocation.com/"], :root a[href^="https://adclick.g.doubleclick.net/"], :root [href^="http://clicks.totemcash.com/"], :root div[data-adv-type="dfp"], :root a[href^="https://misspkl.com/"], :root a[href*="://ufiler-download.ru/"], :root a[href*=".pokupkins.ru"], :root a[href^="https://adswick.com/"], :root a[href*="shakespoint.com"], :root a[href^="//go.xlviiirdr.com"], :root a[href^="https://landing1.brazzersnetwork.com"], :root a[href^="https://a.bestcontentoperation.top/"], :root div[id^="smi2adblock_"], :root [data-m-ad-id], :root .commercial-unit-mobile-top .jackpot-main-content-container > .UpgKEd + .nZZLFc > div > .vci, :root a[href^="https://a-ads.com/"], :root div[id^="news_nest_msk_ru"], :root a[href^="https://brightadnetwork.com/"], :root [id^="unit_"] > a[href*="://smi2.ru"], :root .base-page_left-side > #left_ban, :root [href^="https://www.avantlink.com/click.php"] img, :root iframe[src^="https://pagead2.googlesyndication.com/"], :root [class^="flat_"][class*="_crss"], :root a[href*="netcrys.com"], :root a[href*="//utimg.ru/"], :root a[href^="https://agacelebir.com/"], :root a[href^="https://spygasm.com/track?"], :root a[href^="http://cam4com.go2cloud.org/aff_c?"], :root #adv_unisound ~ #ad_module_cont > [id^="ad_module"], :root a[href^="https://ad.kubiccomps.icu/"], :root [data-desktop-ad-id], :root a[href*="/kshop3.biz"], :root a[href^="https://k2s.cc/pr/"], :root a[href^="http://trk.globwo.online/"], :root a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img, :root a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="], :root a[href^="http://traffic.tc-clicks.com/"], :root a[href^="http://tour.mrskin.com/"], :root iframe[src*="utraff.com"], :root a[href^="https://join.virtualtaboo.com/track/"], :root a[href^="http://https://www.get-express-vpn.com/offer/"], :root a[href^="https://cagothie.net/"], :root [href^="https://glersakr.com/"], :root a[href*="://tdsrotations.ru/"], :root div[id^="google_dfp_"], :root a[href^="http://googleads.g.doubleclick.net/pcs/click"], :root a[href^="https://awentw.com/"], :root a[href^="https://www.googleadservices.com/pagead/aclk?"], :root [name^="google_ads_iframe"], :root a[href*="goext.info"], :root a[href*="://sdertjnbv.xyz/"], :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"], :root a[href*="/myuniversalnk.com/"], :root a[href^="http://deloplen.com/"], :root .rc-cta[data-target], :root a[href^="http://adtrack1.club/"], :root a[href^="http://click.payserve.com/"], :root a[href^="https://porngames.adult/?SID="], :root a[href*="://ya-cdn.ru/r/"], :root #slashboxes > .deals-rail, :root a[href*="trafgid.xyz"], :root a[href*="://getyousoft.ru/"], :root [onclick*="/sb/clk/"], :root [href^="https://www.brighteonstore.com/products/"] img, :root a[href^="http://bc.vc/?r="], :root [data-la-show-block-id], :root .trc_rbox_border_elm .syndicatedItem, :root a[href^="http://adf.ly/?id="], :root [href^="http://homemoviestube.com/"], :root a[href^="http://ad.doubleclick.net/"], :root img[width="120"][height="600"], :root a[href^="//syndication.dynsrvtbg.com/"], :root a[href*="kshop2.biz"], :root a[href^="https://a.adtng.com/"], :root a[href^="//pubads.g.doubleclick.net/"], :root div[data-adname], :root a[href^="https://thechleads.pro/"], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="], :root a[href^="http://allaptair.club/"], :root a[href*="//sub"][href*="bubblesmedia.ru"], :root a[href*="twtn.ru/"], :root [data-d-ad-id], :root a[href*=".engine.adglare.net/"], :root a[href*="ultrabit.ws"], :root a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"], :root a[href*="://new.torrent-pack.ru/"], :root [href*="//loadbrowser.ru/"], :root a[href*="://adv-views.com"], :root a[data-url^="http://paid.outbrain.com/network/redir?"] + .author, :root a[href^="http://bodelen.com/"], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root [href^="https://cpa.10kfreesilver.com/"], :root a[href^="https://a.bestcontentfood.top/"], :root a[href*="//lkstrck2.com/"], :root a[href^="https://reinstandpointdumbest.com/"], :root .base-page_container > .banerRight, :root a[href*="lifenews24x7.ru"], :root a[data-obtrack^="http://paid.outbrain.com/network/redir?"], :root div[id^="ad-position-"], :root [href^="https://goldforyourfuture.com/clk.trk"] img, :root img[src*="top.mail.ru/counter?"], :root a[href^="http://wct.link/"], :root [href^="https://infinitytrk.com/"], :root [onclick*="//msetup.pro/"], :root [onclick^="location.href='http://www.reimageplus.com"], :root [id^="section-ad-banner"], :root a[href^="https://go.julrdr.com/"], :root [href^="https://zone.gotrackier.com/"], :root a[href*="://clickbytes.ru/"], :root a[href*=".adsbid.ru"], :root [href^="https://www.targetingpartner.com/"], :root [href^="https://detachedbates.com/"], :root a[href*="//loderls.ru"], :root [href^="https://www.restoro.com/"], :root a[href^="http://affiliate.glbtracker.com/"], :root a[href^="https://leg.xyz/?track="], :root div[id^="crt-"][style], :root [href^="https://shiftnetwork.infusionsoft.com/go/"] > img, :root [href^="https://www.mypatriotsupply.com/"] > img, :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"], :root [href^="https://secure.bmtmicro.com/servlets/"], :root a[href*="//webbrowser.club/"], :root .pip-video-wrapper > .pip-video-label, :root iframe[src*="traffic-media.co"], :root a[href^="https://losingoldfry.com/"], :root .scroll-fixable.rail-right > .deals-rail, :root a[href^="https://oackoubs.com/"], :root [onclick*=".twkv.ru"], :root a[href^="https://awptjmp.com/"], :root .commercial-unit-mobile-top > .v7hl4d, :root [href^="http://mypillow.com/"] > img, :root [data-ad-manager-id], :root a[href^="https://promo-bc.com/"], :root a[href^="https://clicks.pipaffiliates.com/"], :root [href*="://browseit.ru/"], :root a[href^="https://go.hpyjmp.com"], :root a[href^="https://adserver.adreactor.com/"], :root ADS-RIGHT, :root a[href*=".trust.zone"], :root [href^="https://mystore.com/"] > img, :root [href^="https://mypatriotsupply.com/"] > img, :root iframe[src*="://partner-widget.vse-sdal.com/"], :root [href^="https://mylead.global/stl/"] > img, :root [onclick*="mixadvert.com"], :root #leader-companion > a[href], :root a[onclick*="/link-fes.ru"], :root a[href^="https://transfer.xe.com/signup/track/redirect?"], :root .vid-present > .van_vid_carousel__padding, :root a[href*="://filetaker.ru/"], :root [href^="https://istlnkcl.com/"], :root [href^="https://go.affiliatexe.com/"], :root [href^="https://go.4rabettraff.com/"], :root a[href*="linkmyc.com"], :root a[href^="https://1startfiledownload1.com/"], :root [href^="https://engine.gettopple.com/"], :root img[src*="//counter.yadro.ru/"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"], :root [href^="https://awbbjmp.com/"], :root a[href*="shakescash.com"], :root a[href*="turbotraf.com"], :root [href^="https://affect3dnetwork.com/track/"], :root a[href*="://go.progfile.space/r/"], :root a[href^="https://go.currency.com/"], :root [href^="https://v.investologic.co.uk/"], :root [href^="https://cipledecline.buzz/"], :root [href^="http://join.trannies-fuck.com/"], :root [href^="http://www.fleshlightgirls.com/"], :root [onclick*="trklp.ru"], :root [href^="https://rapidgator.net/article/premium/ref/"], :root div[data-role="sidebarAd"], :root [href^="https://join3.bannedsextapes.com"], :root div[data-spotim-slot], :root [class^="flat_"][class*="_out"], :root a[href^="http://apytrc.com/click/"], :root [href^="https://join.girlsoutwest.com/"], :root [href^="http://trafficare.net/"], :root a[href*="//universalies.info/"], :root a[href^="https://tc.tradetracker.net/"] > img, :root a[href*="//go.webredir.net/r/"], :root [href^="http://join.shemalesfromhell.com/"], :root .plistaList > .itemLinkPET, :root a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"], :root #root > .app .partner-block-wrapper, :root div[class*="spklw"][data-type="ad"], :root [href^="http://join.shemale.xxx/"], :root [href^="https://ilovemyfreedoms.com/landing-"], :root a[href^="https://ads.betfair.com/redirect.aspx?"], :root [data-adblockkey], :root a[href*="filebase.me"], :root a[href^="https://cpmspace.com/"], :root [class^="chp_ads_block"], :root a[href^="https://ads.planetwin365affiliate.com/redirect.aspx?"], :root div[class^="mixadvert"], :root [href^="http://join.rodneymoore.com/"], :root a[href^="https://www.privateinternetaccess.com/"] > img, :root [href*="/vaigowoa.com"], :root a[href*="://rotationlinks.ru/"], :root [href^="//ngeoziadiyc4hi2e.com/"], :root a[href*="awesomeredirector"], :root a[href*="://parandaya.com"], :root a[href*="//loderlx.ru"], :root [id^="div-gpt-ad"], :root [href^="https://ad.admitad.com/"], :root [data-advadstrackid], :root a[href^="https://u.expresstech.io/"], :root [href="https://jdrucker.com/gold"] > img, :root a[href^="https://track.ultravpn.com/"], :root a[href*="://mysoftrotate.ru/"], :root [data-mobile-ad-id], :root a[href^="http://tc.tradetracker.net/"] > img, :root a[href^="https://www.geekbuying.com/dynamic-ads/"], :root a[href^="http://affiliates.thrixxx.com/"], :root a[href*="://betahit.click/"], :root #searchResultsList > div > div[onclick$="'inline.ad'});"], :root [data-freestar-ad], :root [data-ez-name], :root AMP-AD, :root .base-page_center > .banerTop, :root a[href*="://z.cdn.traffic"][href*="/load"], :root a[href*="://dafeb.ru/"], :root div[id^="taboola-stream-"], :root [href^="https://go.astutelinks.com/"], :root [href^="http://residenceseeingstanding.com/"], :root app-large-ad, :root [class^="amp-ad-"], :root .grid > .container > #aside-promotion, :root DFP-AD, :root a[href*="nhebd.xyz"], :root AD-SLOT, :root a[href*="//parandeya.com/"], :root [data-url*="://installpack.net"], :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root [href^="https://click2cvs.com/"], :root img[src*="cycounter"][width="88"][height="31"], :root .trc_rbox_div .syndicatedItem, :root [data-ad-module], :root a[href^="https://tm-offers.gamingadult.com/"], :root a[href^="https://go.cmtaffiliates.com/"], :root [href^="https://trackfin.asia/"], :root .plistaList > .plista_widget_underArticle_item[data-type="pet"], :root a[href^="http://putanapartners.com/go."], :root atf-ad-slot, :root a[href*="sviruniversal.com/"], :root a[href*="octoclick.net"], :root a[href*="/api/redirect?offerid="], :root #atvcap + #tvcap > .mnr-c > .commercial-unit-mobile-top, :root a[href^="https://traffdaq.com/"], :root [data-la-refresh-timeout], :root [class^="div-gpt-ad"], :root a[href*="//refpabjgth.top/"], :root a[href^="https://join.virtuallust3d.com/"], :root a[href*="cpl11.ru"], :root #taw > .med + div > #tvcap > .mnr-c:not(.qs-ic) > .commercial-unit-mobile-top, :root a[href*="beauty-list.ru"], :root [href^="https://www.cloudways.com/en/?id"] { display: none !important; }</style></head><body> -->
+		<!-- <div class="related" role="navigation" aria-label="related navigation"> -->
+		  <!-- <h3>Navigation</h3> -->
+		  <!-- <ul> -->
+			<!-- <li class="right" style="margin-right: 10px"> -->
+			  <!-- <a href="https://www.tradingview.com/pine-script-docs/en/v5/genindex.html" title="General Index" accesskey="I">index</a></li> -->
+			<!-- <li class="right"> -->
+			  <!-- <a href="https://www.tradingview.com/pine-script-docs/en/v5/primer/First_indicator.html" title="First indicator" accesskey="N">next</a> |</li> -->
+			<!-- <li class="right"> -->
+			  <!-- <a href="https://www.tradingview.com/pine-script-docs/en/v5/primer/index.html" title="Pine Script™ primer" accesskey="P">previous</a> |</li> -->
+			<!-- <li class="nav-item nav-item-0"><a href="https://www.tradingview.com/pine-script-docs/en/v5/index.html">Pine Script™ v5 User Manual v5 documentation</a> »</li> -->
+			  <!-- <li class="nav-item nav-item-1"><a href="https://www.tradingview.com/pine-script-docs/en/v5/primer/index.html" accesskey="U">Pine Script™ primer</a> »</li>  -->
+		  <!-- </ul> -->
+		<!-- </div> -->
+		<div class="container-wrapper">
+
+			  <!-- <div id="mobile-toggle"> -->
+				<!-- <a href="index.html#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a> -->
+			  <!-- </div> -->
+				  <!-- <div id="left-column"> -->
+					<!-- <div class="sphinxsidebar"><a href="https://www.tradingview.com/pine-script-docs/en/v5/index.html" class="text-logo">Pine Script™ v5 User Manual</a> -->
+				<!-- <div class="sidebar-block"> -->
+				  <!-- <div class="sidebar-wrapper"> -->
+					<!-- <h2>Table Of Contents</h2> -->
+				  <!-- </div> -->
+				  <!-- <div class="sidebar-toc"> -->
+				
+				
+				  <!-- <ul class="current"> -->
+			<!-- <li class="toctree-l1"><a class="reference internal" href="https://www.tradingview.com/pine-script-docs/en/v5/Introduction.html">Welcome to Pine Script™ v5</a></li> -->
+			<!-- <li class="toctree-l1 current"><a class="reference internal" href="https://www.tradingview.com/pine-script-docs/en/v5/primer/index.html">Pine Script™ primer</a><ul class="current"> -->
+			<!-- <li class="toctree-l2 current"><a class="current reference internal" href="index.html#">First steps</a></li> -->
+			<!-- <li class="toctree-l2"><a class="reference internal" href="https://www.tradingview.com/pine-script-docs/en/v5/primer/First_indicator.html">First indicator</a></li> -->
+			<!-- <li class="toctree-l2"><a class="reference internal" href="https://www.tradingview.com/pine-script-docs/en/v5/primer/Next_steps.html">Next steps</a></li> -->
+			<!-- </ul> -->
+			<!-- </li> -->
+			<!-- <li class="toctree-l1"><a class="reference internal" href="https://www.tradingview.com/pine-script-docs/en/v5/language/index.html">Language</a></li> -->
+			<!-- <li class="toctree-l1"><a class="reference internal" href="https://www.tradingview.com/pine-script-docs/en/v5/concepts/index.html">Concepts</a></li> -->
+			<!-- <li class="toctree-l1"><a class="reference internal" href="https://www.tradingview.com/pine-script-docs/en/v5/writing/index.html">Writing scripts</a></li> -->
+			<!-- <li class="toctree-l1"><a class="reference internal" href="https://www.tradingview.com/pine-script-docs/en/v5/Faq.html">FAQ</a></li> -->
+			<!-- <li class="toctree-l1"><a class="reference internal" href="https://www.tradingview.com/pine-script-docs/en/v5/Error_messages.html">Error messages</a></li> -->
+			<!-- <li class="toctree-l1"><a class="reference internal" href="https://www.tradingview.com/pine-script-docs/en/v5/Release_notes.html">Release notes</a></li> -->
+			<!-- <li class="toctree-l1"><a class="reference internal" href="https://www.tradingview.com/pine-script-docs/en/v5/migration_guides/index.html">Migration guides</a></li> -->
+			<!-- <li class="toctree-l1"><a class="reference internal" href="https://www.tradingview.com/pine-script-docs/en/v5/Where_can_I_get_more_information.html">Where can I get more information?</a></li> -->
+			<!-- </ul> -->
+
+		
+			  <!-- </div> -->
+			<!-- </div> -->
+			<!-- <div class="sidebar-block"> -->
+			  <!-- <div class="sidebar-wrapper"> -->
+				<!-- <div id="main-search"> -->
+				  <!-- <form class="form-inline" action="https://www.tradingview.com/pine-script-docs/en/v5/search.html" method="GET" role="form"> -->
+					<!-- <div class="input-group"> -->
+					  <!-- <input name="q" type="text" class="form-control" placeholder="Search..."> -->
+					<!-- </div> -->
+					<!-- <input type="hidden" name="check_keywords" value="yes"> -->
+					<!-- <input type="hidden" name="area" value="default"> -->
+				  <!-- </form> -->
+				<!-- </div> -->
+			  <!-- </div> -->
+			<!-- </div> -->
+				  
+				<!-- </div> -->
+			  <!-- </div> -->
+			<div id="right-column">		  
+				<div role="navigation" aria-label="breadcrumbs navigation">
+					<ol class="breadcrumb">
+						<li><a href="https://t.me/bbcdfgg" target="blank">TechnoTrading</a></li>
+						<!-- <li><a href="https://www.tradingview.com/pine-script-docs/en/v5/primer/index.html">Pine Script™ primer</a></li> -->
+						<!-- <li>First steps</li> -->
+					</ol>
+				</div>			  
+				<div class="document clearer body">
+					<a class="logo external image-reference" href="https://www.tradingview.com/pine-script-docs/en/v5/Introduction.html"><div align="right" class="align-right"><img alt="Pine Script™ logo" height="100" src="./images/Pine_Script_logo.svg" width="100"></div>
+					</a>
+					<div class="section" id="first-steps">
+						<span id="pagefirststeps"></span>
+						<h1>Уровень смены тренда<a class="headerlink" href="index.html#first-steps" title="Прямая ссылка на этот раздел">¶</a></h1>
+						<h3 align="right">ver. 3.4</h3>
+						<div class="contents local topic" id="contents">
+							<ul class="simple">
+								<li><a class="reference internal" href="index.html#introduction" id="id1">Описание скрипта</a></li>
+								<li><a class="reference internal" href="index.html#using_script" id="id2">Начало работы</a>
+									<!-- <ul> -->
+										<!-- <li><a class="reference internal" href="index.html#script_options" id="id31">Loading scripts from the chart</a></li> -->
+										<!-- <li><a class="reference internal" href="index.html#script_styles" id="id41">Browsing Community Scripts</a></li> -->
+										<!-- <li><a class="reference internal" href="index.html#allerts" id="id4">Changing script settings</a></li> -->
+									<!-- </ul> -->
+								</li>
+								<li><a class="reference internal" href="index.html#options" 	id="id3">Настройки индикатора</a>
+									<ul>
+										<li><a class="reference internal" href="index.html#start_ind" 		id="id31">Начало расчётов</a></li>
+										<li><a class="reference internal" href="index.html#ver_code" 		id="id32">Код верификации</a></li>
+										<li><a class="reference internal" href="index.html#style_pres" 		id="id33">Пресет оформления</a></li>
+										<li><a class="reference internal" href="index.html#shift_lev" 		id="id34">Смещение уровня в тиках</a></li>
+										<li><a class="reference internal" href="index.html#fast_flips" 		id="id35">Быстрые развороты</a></li>
+										<li><a class="reference internal" href="index.html#script_styles" 	id="id41">Вкладка Стиль</a></li>
+									</ul>
+								</li>
+								<li><a class="reference internal" href="index.html#allerts" 	id="id4">Оповещения</a></li>
+								<li><a class="reference internal" href="index.html#examples" 	id="id5">Использование</a></li>
+								<li><a class="reference internal" href="index.html#purchase" 	id="id6">Подписка</a>
+									<ul>
+										<li><a class="reference internal" href="index.html#demo" 		id="id61">Демо доступ</a></li>
+									</ul>
+								</li>
+								<li><a class="reference internal" href="index.html#decline" 	id="id7">Отказ от ответственности</a></li>
+							</ul>
+						</div>
+						<div class="section" id="introduction">
+							<h2><a class="toc-backref" href="index.html#id1">Описание скрипта</a><a class="headerlink" href="index.html#introduction" title="Прямая ссылка на этот раздел">¶</a></h2>
+							<img src="./images/main.png">
+							<!-- <h4>Зачем нужен?</h4 -->
+							<!-- <p>Своевременное определение смены тренда, т.е. доминирующего участника рынка (продавец/покупатель),  -->
+							<!-- просто необходимо для реализации «умного» трейлинг-стопа открытой позиций.</p> -->
+							<!-- <p><strong>С осторожностью</strong>, так как окончание одного тренда не всегда является началом другого,  -->
+							<!-- индикатор возможно использовать для поиска потенциальных точек входа при смене тренда.</p> -->
+							
+							<h4>Зачем нужен?</h4>
+							<!-- <p> -->
+							<ul class="simple">
+							<li style="list-style: circle"><strong>Умный трейлинг-стоп.</strong> Своевременное определение смены тренда, т.е. доминирующего участника рынка (продавец/покупатель), 
+							просто необходимо для реализации «умного» трейлинг-стопа открытой позиций. Не забывайте: войти проще, чем выйти!</li>
+							<li style="list-style: circle"><strong>Точки входа.</strong> Индикатор возможно использовать для поиска потенциальных точек входа при смене тренда, <font color="blue"><strong>но с большой осторожностью</strong></font>, 
+							так как окончание одного тренда не всегда является началом другого.
+							</li>
+							</ul>
+							<p><strong>Предупреждение:</strong> поиск точек входа посредством этого индикатора подходит
+							только очень опытными трейдерами. <a class="reference internal" href="index.html#examples">Примеры использования</a> индикатора.</p>
+
+							<!-- </p> -->
+							
+							<h4>Что показывает?</h4>
+							<p>В первую очередь, главный элемент индикатора - это:</p>
+							<ul class="simple">
+								<li style="list-style: square"><img src="./images/trend_line.png"> уровень смены тренда, т.е. ближайшие:</li>
+								<ul class="simple">
+
+									<li style="list-style: circle"><img src="./images/support.png"> поддержка в тренде (зоне) покупателей (трейлинг-стоп для лонга);</li>
+									<li style="list-style: circle"><img src="./images/resist.png"> сопротивление в тренде (зоне) продавцов (трейлинг-стоп для шорта).</li>
+									<!-- <li>На скриншоте выше представлен первый из базовых пресетов внешнего "оформления" индикатора.</li> -->
+								</ul>
+							</ul>							
+							
+							<!-- <h4>Что показывает?</h4> -->
+							<!-- <p>Индикатор показывает уровень смены тренда (<img src="./images/trend_line.png">), т.е. ближайшие:</p> -->
+							<!-- <ul class="simple"> -->
+								<!-- <li style="list-style: square"><img src="./images/support.png"> поддержку в тренде (зоне) покупателей (трейлинг-стоп для лонга);</li> -->
+								<!-- <li style="list-style: circle"><img src="./images/resist.png"> сопротивление в тренде (зоне) продавцов (трейлинг-стоп для шорта).</li> -->
+								<!-- <!-- <li>На скриншоте выше представлен первый из базовых пресетов внешнего "оформления" индикатора.</li> -->
+							<!-- </ul> -->
+							<p>Основные события индикатора - точки выхода из позиции, отображаются метками двух типов:</p>
+							<ul class="simple">
+								<li style="list-style: square"><img src="./images/green_triangle_up.png"><img src="./images/red_triangle_down.png"> «тейкпрофит» - частичное закрытие из-за ослабления тренда;</li>
+								<!-- <li style="list-style: circle"><img src="./images/green_label_up.png"><img src="./images/red_label_down.png"> «смена тренда» - полное закрытие.</li> -->
+								<li style="list-style: square"><img src="./images/green_label_up.png"><img src="./images/red_label_down.png"> «смена тренда» - полное закрытие по трейлинг-стопу (из-за пересечения рынком актуального уровня смены).</li>
+								
+								<!-- <li>На скриншоте выше представлен первый из базовых пресетов внешнего "оформления" индикатора.</li> -->
+							</ul>
+							<p>Также индикатор подсвечивает фон графика <img src="./images/green_back.png"> <img src="./images/red_back.png"> в трендовых зонах.<!-- </p> -->
+							
+							<br><strong>TIP:</strong> <a class="reference internal" href="index.html#options">Настройками</a> предусмотрена быстрая смена <a class="reference internal" href="index.html#style_pres">Пресетов оформления</a> индикатора.</p>
+							
+							<!-- <p><strong>TIP:</strong> Настройками индикатора предусмотрена быстрая смена пресетов  -->
+							<!-- (<a class="reference internal" href="index.html#style_preset_1">первый, </a> -->
+							<!-- <a class="reference internal" href="index.html#style_preset_2">второй, </a> -->
+							<!-- <a class="reference internal" href="index.html#style_preset_3">третий</a>) графического оформления.  -->
+							
+							<!-- Оформление индикатора по вашему желанию можно гибко кастомизировать во складке <a class="reference internal" href="index.html#script_styles" id="id41">стилей</a></p> -->
+							<!-- <p>В настройках <a class="reference internal" href="index.html#script_styles" id="id41">стилей</a> можно гибко кастомизировать оформление индикатора по вашему желанию. -->
+
+							<!-- <p><strong>TIP:</strong> В настройках <a class="reference internal" href="index.html#script_styles" id="id41">стилей</a> можно гибко кастомизировать оформление индикатора по вашему желанию. -->
+							<!-- Также настройками индикатора предусмотрена быстрая смена пресетов  -->
+							<!-- (<a class="reference internal" href="index.html#style_preset_1">первый, </a> -->
+							<!-- <a class="reference internal" href="index.html#style_preset_2">второй, </a> -->
+							<!-- <a class="reference internal" href="index.html#style_preset_3">третий</a>) оформления.</p> -->
+
+							<h4>Как работает?</h4>
+							<p>Используя объемный анализ рынка, индикатор определяет опорные ценовые уровни, 
+							пробой которых с наибольшей вероятностью влечёт отмену текущей тенденции (тренда), т.е. прекращение (или смену) зоны продавцов/покупателей.</p>
+							<p>Опорные уровни имеют разную "силу" и ранжируются аглоритмами скрипта, позволяя выделять не только основной уровень смены тренда, но также
+							дополнительные - для промежуточных тейкпрофитов открытой позиции.</p>
+							<details>
+								<summary  style="display:revert">Подробнее о механике скрипта (<font color="blue">раздел дополняется</font>)</summary>
+								<p>Здесь будет инфа о том, в какой момент (на каких свечах) регистрируются все события.</p>
+							</details>
+							
+						</div>
+						<div class="section" id="using_script">
+							<h2><a class="toc-backref" href="index.html#id2">Начало работы</a><a class="headerlink" href="index.html#using_script" title="Прямая ссылка на этот раздел">¶</a></h2>
+
+							<p>При добавлении индикатора на график нужно выбрать время (свечу) начала расчёта просто кликнув на график:</p>
+							<img src="./images/img_1_.png">
+							<p>После этого появится диалоговое окно с подтверждением выбранного времени, а также просьбой ввести код верификации:</p>
+							<!-- <img src="./images/FirstSteps-ChangingScriptSettings-01.png"> -->
+							<img src="./images/img_2_.png">
+							<p>Подтвердив введённые данные, индикатор добавлен на график и готов к работе:</p>
+							<img id="style_preset_1" src="./images/img_3_.png">
+							<p>Обратите внимание:</p>
+							<ul class="simple">
+								<li>В правом верхнем углу отображается информация о дате истечения подписки.</li>
+								<li>Начальное время расчёта скрипта помечается вертикальной линией и меткой "Начало".</li>
+								<li>На скриншоте выше представлен первый из базовых <a class="reference internal" href="index.html#style_pres">пресетов</a> внешнего оформления индикатора.</li>
+							</ul>
+							<p><strong>TIP:</strong> "Начальную" линию можно перемещать мышкой прямо на графике в любой момент. Индикатор будет пересчитан с новой "точки" расчётов.</p>
+							<!-- <p>В правом верхнем углу отображается информация о дате истечения подписки.<br> -->
+							<!-- Начальное время расчёта скрипта помечается вертикальной линией и меткой "Начало".<br> -->
+							<!-- <strong>Tip:</strong> "Начальную" линию можно перемещать мышкой прямо на графике.</p> -->
+						</div>
+						<div class="section" id="options">
+							<h2><a class="toc-backref" href="index.html#id3">Настройки индикатора</a><a class="headerlink" href="index.html#options" title="Прямая ссылка на этот раздел">¶</a></h2>
+							<!-- <p>Далее представлено описание вкладок с настройками индикатора.</p> -->
+							<div style="text-align:center">
+								<img width="65%" src="./images/arguments.png">
+							</div>	
+						</div>
+						<div class="section" id="start_ind">
+							<!-- <h3><a class="toc-backref" href="index.html#id31">Вкладка "Аргументы"</a><a class="headerlink" href="index.html#script_options" title="Прямая ссылка на этот раздел">¶</a></h3> -->
+							<!-- <p>To explore and load scripts from you chart, use the “Indicators &amp; Strategies” button:</p> -->
+							<h3><a class="toc-backref" href="index.html#id31">Начало расчётов</a><a class="headerlink" href="index.html#start_ind" title="Прямая ссылка на этот раздел">¶</a></h3>
+							<!-- <h4>Начало расчётов</h4> -->
+								<p>Установка начальной "точки" расчёта индикатора - т.е. даты и времени, с которого будет отрисован индикатор на графике. Задавать начало можно двумя способами:</p>	
+								<ol class="arabic simple">
+									<li>Выбрав необходимую дату и время при помощи выпадающего календаря.</li>
+									<li>Перемещая мышкой на графике вертикальную линию с меткой "Начало" .</li>
+									<!-- <li><strong>Write</strong> Pine Script™ scripts.</li> -->
+								</ol>
+								<p><strong>NOTE:</strong> При смене начальной точки индикатор будет полностью пересчитан и перерисован.</p>
+						</div>
+						<div class="section" id="ver_code">
+							<h3><a class="toc-backref" href="index.html#id32">Код верификации</a><a class="headerlink" href="index.html#ver_code" title="Прямая ссылка на этот раздел">¶</a></h3>
+							<!-- <h4>Код верификации</h4> -->
+								<p>В это поле нужно ввести код активации индикатора. В префиксе кода содержится дата окончания действия подписки. Например, код вида <strong>05_30</strong>_ХХХХХХ будет действовать до полудня 30 числа 05 месяца, т.е. до 30 мая.</p>
+								<p><strong>NOTE:</strong> Время истечения подписки помечается на графике красной вертикальной линией и меткой "Конец":</p>
+								<div style="text-align:center">
+									<img width="80%" src="./images/end.png">
+								</div>
+						</div>
+						<div class="section" id="style_pres">
+							<h3><a class="toc-backref" href="index.html#id33">Пресет оформления</a><a class="headerlink" href="index.html#style_pres" title="Прямая ссылка на этот раздел">¶</a></h3>
+							<!-- <h4>Пресет оформления</h4> -->
+								<!-- <p>Для удобства можно быстро менять визуальное оформление индикатора, не заходя во вкладку "стиль".  -->
+								<!-- На выбор представлены три "базовых" пресета, демонстрирующих разный подход к работе с индикатором.<br> -->
+								<!-- Во вкладке "стиль" можно гибко кастомизировать оформление индикатора по вашему желанию.</p> -->
+								<!-- <p>Второй и третий пресеты (<a class="reference internal" href="index.html#style_preset_1">первый</a> уже был представлен выше):</p> -->
+								<p>Для удобства можно быстро менять визуальное оформление индикатора, не посещая вкладку <a class="reference internal" href="index.html#script_styles">Стиль</a>. 
+								На выбор представлены три "базовых" пресета, демонстрирующих разный подход к работе с индикатором:</p>
+								<li style="list-style: square"><a class="reference internal" href="index.html#style_preset_1">Первый</a> был представлен в разделе <a class="reference internal" href="index.html#using_script" id="id2">Начало работы</a>.</li>
+								<li style="list-style: square">Второй пресет:</li>
+								<img id="style_preset_2" src="./images/img_4_.png">
+								<br><br><li style="list-style: square">Третий пресет:</li>
+
+								<img id="style_preset_3" src="./images/img_5_.png">
+								<!-- <p><strong>NOTE:</strong> Про метки в виде треугольников на последнем скриншоте - читайте ЗДЕСЬ.</p> -->
+						</div>
+						<div class="section" id="shift_lev">
+							<h3><a class="toc-backref" href="index.html#id34">Смещение уровня в тиках</a><a class="headerlink" href="index.html#shift_lev" title="Прямая ссылка на этот раздел">¶</a></h3>
+							<!-- <h4>Смещение уровня в тиках</h4> -->
+								<p>Дополнительное смещение уровней для "расширения" зон покупок/продаж. Это полезно, например, при работе с инструментами при низкой волатильности.</p>
+								<p>Слева - смещение на 10 тиков, справа - на 30:</p>
+								<!-- <div style="text-align:center"> -->
+									<img width="100%" src="./images/shift_2.png">
+								<!-- </div> -->
+								<p><strong>NOTE:</strong> Размер смещения указан для примера. Реальная величина смещения зависит от торговой стратегии и стиля вашей торговли.</p>
+						</div>
+						<div class="section" id="fast_flips">
+							<h3><a class="toc-backref" href="index.html#id35">Быстрые развороты</a><a class="headerlink" href="index.html#fast_flips" title="Прямая ссылка на этот раздел">¶</a></h3>
+							<!-- <h4>Быстрые развороты</h4> -->
+							<p>По умолчанию смена тренда осуществляется закрытием свечи за уровнем. 
+							Если включить опцию "Быстрые развороты", то смена тренда будет по касанию актуального уровня, т.е. тенью свечи. </p>
+							<p>Слева - опция отключена, справа - включена:</p>
+
+							<!-- <table border="1" class="docutils"> -->
+								<!-- <colgroup> -->
+								<!-- <col width="20%"> -->
+								<!-- <col width="80%"> -->
+								<!-- </colgroup> -->
+								<!-- <tbody valign="top"> -->
+									<!-- <tr class="row-odd"> -->
+										<!-- <!-- <td><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></td> -->
+										<!-- <td>Less Than</td> -->
+										<!-- <td>Less Than</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-even"> -->
+										<!-- <td><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></td> -->
+										<!-- <td>Less Than or Equal To</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">!=</span></code></td> -->
+									<!-- <td>Not Equal</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">==</span></code></td> -->
+									<!-- <td>Equal</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></td> -->
+									<!-- <td>Greater Than</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></td> -->
+									<!-- <td>Greater Than or Equal To</td> -->
+									<!-- </tr> -->
+								<!-- </tbody> -->
+							<!-- </table> -->
+								<!-- <div style="text-align:center"> -->
+									<img width="100%" src="./images/flips_2.png">
+								<!-- </div>	 -->
+						</div>
+						<div class="section" id="script_styles">
+							<h3><a class="toc-backref" href="index.html#id41">Вкладка "Стиль"</a><a class="headerlink" href="index.html#script_styles" title="Прямая ссылка на этот раздел">¶</a></h3>
+							<p>В этой вкладке можно гибко настроить графическое оформление индикатора (линии, метки, цвет фона и т.д.) привычным способом.</p>
+							<div style="text-align:center">
+								<img width="65%" src="./images/img_style.png">
+							</div>
+							<!-- <p>На этой вкладке, как и у любого другого скрипта, гибко настраивается отображение всех графических элементов (линий, меток, заливки фона и др.).<!-- </p> -->
+
+							<!-- <strong>TIP:</strong> Названия объектов plot, рисующих уровни <img src="./images/trend_line.png"> <img src="./images/support.png"> <img src="./images/resist.png">  -->
+							<!-- содержат наименования их <a class="reference external" target="_blank" href="https://ru.tradingview.com/support/solutions/43000531021/">плейсхолдеров</a>  -->
+							<!-- для упрощения конфигурации <a class="reference internal" href="index.html#allerts">оповещений</a>:</p> -->
+							<!-- <div style="text-align:center"> -->
+								<!-- <img width="65%" src="./images/style.png"> -->
+							<!-- </div> -->
+
+							<!-- <p>Основные графические элементы индикатора:</p>  -->
+							<!-- <table border="1" class="docutils"> -->
+								<!-- <colgroup> -->
+								<!-- </colgroup> -->
+								<!-- <tbody valign="top"> -->
+									<!-- <tr class="row-odd"> -->
+										<!-- <td><img src="./images/trend_line.png"></td> -->
+										<!-- <td>Текущий уровень смены тренда. Пересечение уровня - возможная смена тренда.</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-odd"> -->
+										<!-- <td><img src="./images/support.png"></td> -->
+										<!-- <td>Поддержка в зоне покупателей. Смещаясь выступает в роли трейлинг-стопа для лонгов.</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-odd"> -->
+										<!-- <td><img src="./images/resist.png"></td> -->
+										<!-- <td>Сопротивление в зоне продавцов. Смещаясь выступает в роли трейлинг-стопа для шортов.</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-odd"> -->
+										<!-- <td><img src="./images/green_label_up.png"></td> -->
+										<!-- <td>Начало зоны покупателей. Место пересечения рынком уровня смены тренда - сопротивления.</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-odd"> -->
+										<!-- <td><img src="./images/red_label_down.png"></td> -->
+										<!-- <td>Начало зоны продавцов. Место пересечения рынком уровня смены тренда - поддержки.</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-odd"> -->
+										<!-- <td><img src="./images/green_triangle_up.png"></td> -->
+										<!-- <td>Сокращение шортов из-за ослабления тренда.</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-odd"> -->
+										<!-- <td><img src="./images/red_triangle_down.png"></td> -->
+										<!-- <td>Сокращение лонгов из-за ослабления тренда.</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-odd"> -->
+										<!-- <td><img src="./images/green_back.png"></td> -->
+										<!-- <td>Заливка фона в зоне покупателей</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-odd"> -->
+										<!-- <td><img src="./images/red_back.png"></td> -->
+										<!-- <td>Заливка фона в зоне продавцов</td> -->
+									<!-- </tr> -->
+								<!-- </tbody> -->
+							<!-- </table> -->
+
+							<!-- <h4>Уровень смены тренда</h4> -->
+								<!-- <p>На этой вкладке гибко настривается отображение элементов индикатора - линий, заливки фона, меток и др.</p> -->
+							<!-- <h4>Поддержка (стоп) лонгов</h4> -->
+								<!-- <p>На этой вкладке гибко настривается отображение элементов индикатора - линий, заливки фона, меток и др.</p> -->
+							<!-- <h4>Сопротивление (стоп) шортов</h4> -->
+								<!-- <p>На этой вкладке гибко настривается отображение элементов индикатора - линий, заливки фона, меток и др.</p> -->
+								
+							<!-- <h4>Начало зоны покупок</h4> -->
+								<!-- <p>На этой вкладке гибко настривается отображение элементов индикатора - линий, заливки фона, меток и др.</p> -->
+							<!-- <h4>Начало зоны продаж</h4> -->
+								<!-- <p>На этой вкладке гибко настривается отображение элементов индикатора - линий, заливки фона, меток и др.</p> -->
+							<!-- <h4>Тейкпрофит лонга</h4> -->
+								<!-- <p>На этой вкладке гибко настривается отображение элементов индикатора - линий, заливки фона, меток и др.</p> -->
+							<!-- <h4>Тейкпрофит шорта</h4> -->
+								<!-- <p>На этой вкладке гибко настривается отображение элементов индикатора - линий, заливки фона, меток и др.</p> -->
+							<!-- <table border="1" class="docutils"> -->
+								<!-- <colgroup> -->
+								<!-- <!-- <col width="20%"> --> 
+								<!-- <!-- <col width="80%"> --> 
+								<!-- </colgroup> -->
+								<!-- <tbody valign="top"> -->
+									<!-- <tr class="row-odd"> -->
+										<!-- <td>Уровень смены тренда</td> -->
+										<!-- <td>Less Than</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">Поддержка (стоп) лонгов</span></code></td> -->
+									<!-- <td>Less Than or Equal To</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">Сопротивление (стоп) шортов</span></code></td> -->
+									<!-- <td>Not Equal</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">==</span></code></td> -->
+									<!-- <td>Equal</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></td> -->
+									<!-- <td>Greater Than</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></td> -->
+									<!-- <td>Greater Than or Equal To</td> -->
+									<!-- </tr> -->
+								<!-- </tbody> -->
+							<!-- </table> -->
+								<!-- <p>You can also search for scripts using the homepage’s “Search” field, and filter scripts using different criteria. -->
+								<!-- The Help Center has a page explaining the <a class="reference external" href="https://www.tradingview.com/support/solutions/43000558522">different types of scripts</a> that are available.</p> -->
+								<!-- <li><strong>{{plot_0}} Уровень смены тренда</strong> lists the scripts you have “favorited” by clicking on the star that appears to the left of its name when you mouse over it.</li> -->
+								<!-- <li><strong>{{plot_1}} Поддержка (стоп) лонгов</strong> displays the scipts you have written and saved in the Pine Script™ Editor. They are saved in TradingView’s cloud.</li> -->
+								<!-- <li><strong>{{plot_2}} Сопротивление (стоп) шортов</strong> groups all TradingVIew built-ins organized in four categories: indicators, strategies, candlestick patterns and volume profiles. Most are written in Pine Script™ and available for free.</li> -->
+								<!-- <li><strong>Смещение уровня в тиках</strong> is where you can search from the 100,000+ published scripts written by TradingView users.</li> -->
+								<!-- <li><strong>Быстрые развороты</strong> contains the list of the invite-only scripts you have been granted access to by their authors.</li> -->
+
+								<!-- <p>The scripts stream shows script <em>widgets</em>, i.e., placeholders showing a miniature view of each publication’s chart and description, and its author. -->
+								<!-- By clicking on it you will open the <em>script’s page</em>, where you can see the script on a chart, read the author’s description, like the script, leave comments or -->
+								<!-- read the script’s source code if it was published open-source.</p> -->
+								<!-- <p>Once you find an interesting script in the Community Scripts, follow the instructions in the Help Center to <a class="reference external" href="https://www.tradingview.com/support/solutions/43000555216">load it on your chart</a>.</p> -->
+						</div>
+						<div class="section" id="allerts">
+							<h2><a class="toc-backref" href="index.html#id4">Оповещения <font color="blue">(раздел дополняется)</font></a><a class="headerlink" href="index.html#allerts" title="Прямая ссылка на этот раздел">¶</a></h2>
+							
+							<p>Индикатор генерирует индивидуальные оповещения по шести событиям:</p>
+							<!-- <ol class="arabic simple"> -->
+								<!-- <li><strong>Начало зоны покупок</strong> some of the tens of thousands of existing scripts on the platform.</li> -->
+								<!-- <li><strong>Начало зоны продаж</strong> the Pine Script™ code of existing scripts.</li> -->
+								<!-- <li><strong>Тейкпрофит шорта по тренду</strong> Pine Script™ scripts.</li> -->
+								<!-- <li><strong>Тейкпрофит лонга по тренду</strong> Pine Script™ scripts.</li> -->
+								<!-- <li><strong>Трейл поддержки</strong> Pine Script™ scripts.</li> -->
+								<!-- <li><strong>Трейл сопротивления</strong> Pine Script™ scripts.</li> -->
+							<!-- </ol> -->
+							<!-- <p>Основные графические элементы индикатора:</p>  -->
+							<table border="1" class="docutils">
+								<colgroup>
+								</colgroup>
+								<tbody valign="top">
+									<tr class="row-odd">
+										<td><img src="./images/img_alert_green_label_up.png"></td>
+										<td><strong>Конец зоны продаж:</strong> пересечение рынком шортового стопа (сопротивления). Полное закрытие шортов.</td>
+									</tr>
+									<tr class="row-odd">
+										<td><img src="./images/img_alert_red_label_down.png"></td>
+										<td><strong>Конец зоны покупок:</strong> пересечение рынком лонгового стопа (поддержки). Полное закрытие лонгов.</td>
+									</tr>
+									<tr class="row-odd">
+										<td><img src="./images/alert_green_triangle_up.png"></td>
+										<td><strong>Тейкпрофит шорта по тренду:</strong> частичное сокращение шортов из-за ослабления тренда.</td>
+									</tr>
+									<tr class="row-odd">
+										<td><img src="./images/alert_red_triangle_down.png"></td>
+										<td><strong>Тейкпрофит лонга по тренду:</strong> частичное сокращение лонгов из-за ослабления тренда.</td>
+									</tr>
+									<!-- <tr class="row-odd"> -->
+										<!-- <td><img src="./images/green_back.png"></td> -->
+										<!-- <td>Заливка фона в зоне покупателей</td> -->
+									<!-- </tr> -->
+									<!-- <tr class="row-odd"> -->
+										<!-- <td><img src="./images/red_back.png"></td> -->
+										<!-- <td>Заливка фона в зоне продавцов</td> -->
+									<!-- </tr> -->
+									<tr class="row-odd">
+										<td><img src="./images/img_alert_upd_sup.png"></td>
+										<td><strong>Трейл поддержки:</strong> ступенчатое смещение (подтягивание) уровня поддержки.</td>
+									</tr>
+									<tr class="row-odd">
+										<td><img src="./images/img_alert_upd_res.png"></td>
+										<td><strong>Трейл сопротивления:</strong> ступенчатое смещение (подтягивание) уровня сопротивления.</td>
+									</tr>
+	
+								</tbody>
+							</table>
+
+						</div>
+						<div class="section" id="examples">
+							<h2><a class="toc-backref" href="index.html#id5">Использование</a><a class="headerlink" href="index.html#examples" title="Прямая ссылка на этот раздел">¶</a></h2>
+							<p>
+							<a href="https://ru.tradingview.com/chart/CL1!/RceqEnwQ-demonstratsiya-indikatora-urovenb-smeny-trenda-na-grafike-cl" target="blank">
+							Посмотреть действие индикатора на инструменте "Фьючерсы на нефть WTI (NYMEX:CL1!)".</a>
+							
+							</p>
+						</div>
+						<div class="section" id="purchase">
+							<h2><a class="toc-backref" href="index.html#id6">Подписка</a><a class="headerlink" href="index.html#purchase" title="Прямая ссылка на этот раздел">¶</a></h2>
+							<p>Покупай ежемесячную подписку за 200$ и пользуйся индикатором мечты.</p>
+						</div>
+						<div class="section" id="demo">
+							<h3><a class="toc-backref" href="index.html#id61">Демо доступ</a><a class="headerlink" href="index.html#demo" title="Прямая ссылка на этот раздел">¶</a></h3>
+							<p>Для получения демо-доступа пройди по <a href="https://t.me/bbcdfgg" target="blank">ссылке</a>.</p>
+						</div>
+						<div class="section" id="decline">
+							<h2><a class="toc-backref" href="index.html#id7">Отказ от ответственности</a><a class="headerlink" href="index.html#decline" title="Прямая ссылка на этот раздел">¶</a></h2>
+							<p>До того как приступать к использованию любой торговой программы, вам следует проконсультироваться с профессионалом в области финансов. 
+							Пожалуйста, тщательно обдумайте, подходит ли такая торговля для вас в свете вашей финансовой ситуации, и сможете ли вы взять на себя финансовые риски. 
+							Ни при каких обстоятельствах мы не несём ответственности за любые убытки или ущерб, которые понесли вы или кто-либо другой в результате любой торговой 
+							или инвестиционной активности, которой вы или кто-либо другой занимаетесь, основываясь на любой информации и материалах, 
+							полученных посредством использования наших услуг или на этом сайте.</p>
+						</div>
+					</div>
+				</div>					
+			</div>
+		</div>
+		<!-- <div class="clearer"></div> -->
+		  
+				<!-- </div> -->
+		<!-- <div class="clearfix"></div> -->
+		<!-- </div> -->
+			<!-- <div class="related" role="navigation" aria-label="related navigation"> -->
+			  <!-- <h3>Navigation</h3> -->
+			  <!-- <ul> -->
+				<!-- <li class="right" style="margin-right: 10px"> -->
+				  <!-- <a href="https://www.tradingview.com/pine-script-docs/en/v5/genindex.html" title="General Index">index</a></li> -->
+				<!-- <li class="right"> -->
+				  <!-- <a href="https://www.tradingview.com/pine-script-docs/en/v5/primer/First_indicator.html" title="First indicator">next</a> |</li> -->
+				<!-- <li class="right"> -->
+				  <!-- <a href="https://www.tradingview.com/pine-script-docs/en/v5/primer/index.html" title="Pine Script™ primer">previous</a> |</li> -->
+				<!-- <li class="nav-item nav-item-0"><a href="https://www.tradingview.com/pine-script-docs/en/v5/index.html">Pine Script™ v5 User Manual v5 documentation</a> »</li> -->
+				  <!-- <li class="nav-item nav-item-1"><a href="https://www.tradingview.com/pine-script-docs/en/v5/primer/index.html">Pine Script™ primer</a> »</li>  -->
+			  <!-- </ul> -->
+			<!-- </div> -->
+		<!-- <script type="text/javascript"> -->
+		  <!-- $("#mobile-toggle a").click(function () { -->
+			<!-- $("#left-column").toggle(); -->
+		  <!-- }); -->
+		<!-- </script> -->
+		<script type="text/javascript" src="./images/bootstrap.js.загружено"></script>
+
+		<script type="text/javascript" src="./images/theme.js.загружено"></script>
+
+		<!-- <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions"> -->
+		  <!-- <span class="rst-current-version" data-toggle="rst-current-version"> -->
+			<!-- <span class="fa fa-book"> Options</span> -->
+			<!-- v: v5 -->
+			<!-- <span class="fa fa-caret-down"></span> -->
+		  <!-- </span> -->
+		  <!-- <div class="rst-other-versions"> -->
+			<!-- <dl> -->
+			  <!-- <dt>Languages</dt> -->
+			  
+				<!-- <strong> -->
+				<!-- <dd><a href="index.html">en</a></dd> -->
+				<!-- </strong> -->
+			  
+			<!-- </dl> -->
+			<!-- <dl> -->
+			  <!-- <dt>Versions</dt> -->
+			  
+				
+				<!-- <dd><a href="https://www.tradingview.com/pine-script-docs/en/v3/primer/First_steps.html">v3</a></dd> -->
+				
+			  
+				
+				<!-- <dd><a href="https://www.tradingview.com/pine-script-docs/en/v4/primer/First_steps.html">v4</a></dd> -->
+				
+			  
+				<!-- <strong> -->
+				<!-- <dd><a href="index.html">v5</a></dd> -->
+				<!-- </strong> -->
+			  
+			<!-- </dl> -->
+		  <!-- </div> -->
+		<!-- </div> -->
+		<script type="text/javascript">
+			jQuery(function () {
+				SphinxRtdTheme.Navigation.enable(false);
+			});
+		</script>
+		<div class="footer">
+		© Copyright 2023.
+		</div>
+		  
+	</body>
+</html>
