@@ -206,7 +206,7 @@
 
 							<p>When adding the indicator to the chart, you need to select the start time (candle) of the calculation by clicking on the chart:</p>
 							<img src="./images/img_1_.png">
-							<p>After that, a dialog box will appear to confirm the selected time, as well as a request to enter the verification code (only for demo version of indicator):</p>
+							<p>After that, a dialog box will appear to confirm the selected time, as well as a request to enter the verification code:</p>
 							<!-- <img src="./images/FirstSteps-ChangingScriptSettings-01.png"> -->
 							<img src="./images/img_2_.png">
 							<p>After confirming the entered data, the indicator is added to the chart and ready to work:</p>
@@ -233,10 +233,10 @@
 										<li>Selecting the desired date and time using the drop-down calendar.</li>
 										<li>Moving the vertical line with the label "Begin" on the chart with the mouse.</li>
 									</ol>
-									<p><strong>NOTE:</strong> Changing the start point will cause the indicator to be completely recalculated and repainting.</p>
+									<p><strong>NOTE:</strong> Changing the start point will cause the indicator to be completely recalculated and redrawn.</p>
 								</div>
 								<div class="section" id="ver_code">
-									<h3><a class="toc-backref" href="index.html#id32">Verification Code (only for demo version)</a><a class="headerlink" href="index.html#ver_code" title="Direct link to this section">¶</a></h3>
+									<h3><a class="toc-backref" href="index.html#id32">Verification Code</a><a class="headerlink" href="index.html#ver_code" title="Direct link to this section">¶</a></h3>
 									<p>In this field, you need to enter the activation code of the indicator. The prefix of the code contains the expiration date of the subscription. For example, a code of the form <strong>05_30</strong>_XXXXXX will be valid until noon on the 30th day of May.</p>
 									<p><strong>NOTE:</strong> The subscription expiration time is marked on the chart with a red vertical line and the label "End":</p>
 								</div>
@@ -265,7 +265,7 @@
 								<summary style="display:revert"><font color="blue">Third</font></summary>
 									<img id="style_preset_3" src="./images/img_5_.png">
 								</details>
-								<br><p><strong>NOTE:</strong> In the <a class="reference internal" href="index.html#script_styles">Style</a> tab, you can still manually customize the drawing appearance of the indicator!</p>
+								<br><p><strong>NOTE:</strong> In the <a class="reference internal" href="index.html#script_styles">Style</a> tab, you can still manually customize the drawing appearance of the script!</p>
 
 								<!-- <li style="list-style: square"><a class="reference internal" href="index.html#style_preset_1">Первый</a> был представлен в разделе <a class="reference internal" href="index.html#using_script" id="id2">Начало работы</a>.</li> -->
 								<!-- <li style="list-style: square">Второй пресет:</li> -->
@@ -434,7 +434,7 @@
 								<!-- <p>Once you find an interesting script in the Community Scripts, follow the instructions in the Help Center to <a class="reference external" href="https://www.tradingview.com/support/solutions/43000555216">load it on your chart</a>.</p> -->
 						</div>
 						<div class="section" id="alerts">
-							<h2><a class="toc-backref" href="index.html#id4">Alerts</a><a class="headerlink" href="index.html#alerts" title="Direct link to this section">¶</a></h2>
+							<h2><a class="toc-backref" href="index.html#id4">Alerts <font color="blue">(under construction)</font></a><a class="headerlink" href="index.html#alerts" title="Direct link to this section">¶</a></h2>
 
 							<p>The indicator generates individual alerts for six events:</p>
 							<!-- <ol class="arabic simple"> -->
@@ -452,19 +452,19 @@
 								<tbody valign="top">
 									<tr class="row-odd">
 									  <td><img src="./images/img_alert_green_label_up.png"></td>
-									  <td><strong>«1. End of sellers trend»</strong><br>Crossing the resistance level by price action. Full closure of the shorts is recommended.</td>
+									  <td><strong>End of Short trend:</strong> intersection of the market with the short stop (resistance). Complete closure of shorts.</td>
 									</tr>
 									<tr class="row-odd">
 									  <td><img src="./images/img_alert_red_label_down.png"></td>
-									  <td><strong>«2. End of buyers trend»</strong><br>Crossing the support level by price action. Full closure of the longs is recommended.</td>
+									  <td><strong>End of Long trend:</strong> intersection of the market with the long stop (support). Complete closure of longs.</td>
 									</tr>
 									<tr class="row-odd">
 									  <td><img src="./images/alert_green_triangle_up.png"></td>
-									  <td><strong>«3. Reduce SHORT during the downtrend»</strong><br>Partial reduction (take-profit) of shorts due to sellers trend weakening.</td>
+									  <td><strong>Take-profit in Short trend:</strong> partial reduction of shorts due to trend weakening.</td>
 									</tr>
 									<tr class="row-odd">
 									  <td><img src="./images/alert_red_triangle_down.png"></td>
-									  <td><strong>«4. Reduce LONG during the uptrend»</strong><br>Partial reduction (take-profit) of longs due to buyers trend weakening.</td>
+									  <td><strong>Take-profit in Long trend:</strong> partial reduction of longs due to trend weakening.</td>
 									</tr>
 									<!-- <tr class="row-odd"> -->
 										<!-- <td><img src="./images/green_back.png"></td> -->
@@ -476,11 +476,11 @@
 									<!-- </tr> -->
 									<tr class="row-odd">
 									  <td><img src="./images/img_alert_upd_sup.png"></td>
-									  <td><strong>«5. Update the support level»</strong><br>Step-by-step updating (shifting) of the support level during the uptrend.<br>It's a trailing of stop when you are in long position.</td>
+									  <td><strong>Trail-support:</strong> step-by-step shifting of the support level.</td>
 									</tr>
 									<tr class="row-odd">
 									  <td><img src="./images/img_alert_upd_res.png"></td>
-									  <td><strong>«6. Update the resistance level»</strong><br>Step-by-step updating (shifting) of the resistance level during the downtrend.<br>It's a trailing of stop when you are in short position.</td>
+									  <td><strong>Trail-resistance:</strong> step-by-step shifting of the resistance level.</td>
 									</tr>
 	
 								</tbody>
@@ -496,7 +496,7 @@
 						</div>
 						<div class="section" id="purchase">
 						  <h2><a class="toc-backref" href="index.html#id6">Subscription</a><a class="headerlink" href="index.html#purchase" title="Direct link to this section">¶</a></h2>
-						  <p>Buy a monthly subscription for $300 and use the indicator of your dream...</p>
+						  <p>Buy a monthly subscription for $200 and use the indicator of your dream...</p>
 						</div>
 						<div class="section" id="demo">
 						  <h3><a class="toc-backref" href="index.html#id61">Demo access</a><a class="headerlink" href="index.html#demo" title="Direct link to this section">¶</a></h3>
